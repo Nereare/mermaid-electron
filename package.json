@@ -1,16 +1,37 @@
 {
-  "name": "{{PKG_REPO}}",
-  "description": "{{PKG_DESC}}",
-  "version": "{{PKG_VERS}}",
+  "name": "mermaid-electron",
+  "description": "A simple electron-based desktop app to run mermaid on demand, locally",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Igor Padoim",
   "maintainers": [
     {
-      "name": "{{PKG_AUTHOR}}",
-      "email": "{{PKG_USEREMAIL}}",
-      "web": "{{PKG_USERURI}}"
+      "name": "Igor Padoim",
+      "email": "igorpadoim@gmail.com",
+      "web": "https://nereare.com/"
     }
   ],
   "bugs": {
-    "web": "https://github.com/{{PKG_USERNAME}}/{{PKG_REPO}}/issues"
+    "web": "https://github.com/Nereare/mermaid-electron/issues"
   },
-  "license": "{{PKG_LICENSE_SPDX}}"
+  "license": "Hippocratic-3",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^31.1.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
 }
